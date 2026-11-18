@@ -25,6 +25,7 @@ Buscador de archivos para macOS al estilo de *Everything* de Windows: encuentra 
 |---|---|
 | `acta 2026` | nombres que contienen "acta" **y** "2026" |
 | `informe .pdf` | nombres con "informe" que terminan en `.pdf` |
+| `informe .p` | lo mismo, con cualquier extensión que empiece por p (`.pdf`, `.png`, `.pptx`…); se afina letra a letra |
 | `ext:mov;mp4` | archivos con cualquiera de esas extensiones |
 | `foto*final?` | comodines: `*` cualquier texto, `?` un carácter |
 | `logo !viejo` | contienen "logo" pero **no** "viejo" |
@@ -82,6 +83,7 @@ A file search app for macOS in the spirit of *Everything* for Windows: it finds 
 |---|---|
 | `acta 2026` | names containing "acta" **and** "2026" |
 | `report .pdf` | names with "report" ending in `.pdf` |
+| `report .p` | same, with any extension starting with p (`.pdf`, `.png`, `.pptx`…); narrows as you type |
 | `ext:mov;mp4` | files with any of those extensions |
 | `photo*final?` | wildcards: `*` any text, `?` one character |
 | `logo !old` | contain "logo" but **not** "old" |

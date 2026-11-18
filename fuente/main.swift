@@ -384,7 +384,11 @@ final class Indice {
                             var m: Bool
                             switch t.tipo {
                             case 0: m = memmem(s0, sn, t.p, t.n) != nil
-                            case 1: m = sn >= t.n && memcmp(s0 + (sn - t.n), t.p, t.n) == 0
+                            case 1:
+                                // .ext: la extensión del nombre empieza por lo escrito (".pd" encuentra ".pdf")
+                                var k = sn - 1
+                                while k >= 0 && s0[k] != 46 { k -= 1 }
+                                m = k >= 0 && sn - k >= t.n && memcmp(s0 + k, t.p, t.n) == 0
                             case 2: m = glob(UnsafeBufferPointer(start: t.p, count: t.n), UnsafeBufferPointer(start: s0, count: sn))
                             default: m = ancs[t.anc][i]
                             }
